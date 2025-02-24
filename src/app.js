@@ -23,9 +23,6 @@ app.use('/api/orders', require('./routes/orders'))
 // Swagger documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
-// Error handling
-console.log('+++++++++ Error Handler Type:', typeof errorHandler) // Debugging line
-
 app.use(errorHandler)
 
 module.exports = app
